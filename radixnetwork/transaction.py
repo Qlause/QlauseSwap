@@ -101,17 +101,17 @@ class Transaction:
         
         return self.status(finalized_tx['transaction_identifier']['hash'])
         
-# import decouple
+import decouple
 
-# WALLET_PASSWORD = decouple.config("WALLET_PASSWORD")
-# WALLET_NONCE = decouple.config("WALLET_NONCE")
-# WALLET_CIPHERTEXT = decouple.config("WALLET_CIPHERTEXT")
-# WALLET_SALT = decouple.config("WALLET_SALT")
-# WALLET_MAC = decouple.config("WALLET_MAC")
+WALLET_PASSWORD = decouple.config("WALLET_PASSWORD")
+WALLET_NONCE = decouple.config("WALLET_NONCE")
+WALLET_CIPHERTEXT = decouple.config("WALLET_CIPHERTEXT")
+WALLET_SALT = decouple.config("WALLET_SALT")
+WALLET_MAC = decouple.config("WALLET_MAC")
 
-# wallet = Wallet(password=WALLET_PASSWORD, salt=WALLET_SALT, nonce=WALLET_NONCE, ciphertext=WALLET_CIPHERTEXT, mac=WALLET_MAC)
+wallet = Wallet(password=WALLET_PASSWORD, salt=WALLET_SALT, nonce=WALLET_NONCE, ciphertext=WALLET_CIPHERTEXT, mac=WALLET_MAC)
 
-# tx = Transaction(wallet)
+tx = Transaction(wallet)
 # res = tx.send_token("rdx1qsp222hghu4s3hpscenxvrwjz62tqkz30sa0kvqy5x6v8ncj55dr68ch8ph2n", "inu_rr1qw9zhy7tzs85jhsm0y3jrlggfkjku673h4aze6836g8qslavfy", "1000000000000000000")
-# res = tx.status("e145049d81403d6d5cb28f8eb0b57ede53afebd9e4f7bf326b62cbd2b73e5ede")
-# print(res)
+res = tx.status("bb1a02ef8da801d2ca9e3366ceaaf8765c82e9423f8d9921df29b70b81f3d4c3")
+print(res)
